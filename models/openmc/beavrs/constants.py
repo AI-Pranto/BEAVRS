@@ -3,8 +3,8 @@ import math
 
 ############## Material paramters ##############
 
-h2oDens = 0.73986
-nominalBoronPPM = 975
+h2oDens = 0.71
+nominalBoronPPM = 378
 
 ############## Geometry paramters ##############
 
