@@ -30,7 +30,7 @@ def openmc_materials(ppm):
 
     # Create air material
     mats['Air'] = openmc.Material(name='Air')
-    mats['Air'].temperature = 300
+    mats['Air'].temperature = 565
     mats['Air'].set_density('g/cc', 0.000616)
     mats['Air'].add_element('O', 0.2095, 'ao')
     mats['Air'].add_element('N', 0.7809, 'ao')
@@ -39,7 +39,7 @@ def openmc_materials(ppm):
 
     # Create stainless steel material
     mats['SS304'] = openmc.Material(name='SS304')
-    mats['SS304'].temperature = 300
+    mats['SS304'].temperature = 565
     mats['SS304'].set_density('g/cc', 8.03)
     mats['SS304'].add_element('Si', 0.0060, 'wo')
     mats['SS304'].add_element('Cr', 0.1900, 'wo')
@@ -49,7 +49,7 @@ def openmc_materials(ppm):
 
     # Create Ag-In-Cd control rod material
     mats['Ag-In-Cd'] = openmc.Material(name='Ag-In-Cd')
-    mats['Ag-In-Cd'].temperature = 300
+    mats['Ag-In-Cd'].temperature = 565
     mats['Ag-In-Cd'].set_density('g/cc', 10.16)
     mats['Ag-In-Cd'].add_element('Ag', 0.80, 'wo')
     mats['Ag-In-Cd'].add_element('In', 0.15, 'wo')
@@ -57,20 +57,20 @@ def openmc_materials(ppm):
 
     # Create B4C control rod material
     mats['B4C'] = openmc.Material(name='B4C')
-    mats['B4C'].temperature = 300
+    mats['B4C'].temperature = 565
     mats['B4C'].set_density('g/cc', 1.76)
     mats['B4C'].add_element('B', 0.7826, 'wo')
     mats['B4C'].add_element('C', 0.2174, 'wo')
 
     # Create He gas gap material
     mats['Helium'] = openmc.Material(name='Helium')
-    mats['Helium'].temperature = 300
+    mats['Helium'].temperature = 565
     mats['Helium'].set_density('g/cc', 0.0015981)
     mats['Helium'].add_element('He', 1.0, 'wo')
 
     # Create inconel 718 material
     mats['Inconel 718'] = openmc.Material(name='Inconel 718')
-    mats['Inconel 718'].temperature = 300
+    mats['Inconel 718'].temperature = 565
     mats['Inconel 718'].set_density('g/cc', 8.2)
     mats['Inconel 718'].add_element('Si', 0.0035, 'wo')
     mats['Inconel 718'].add_element('Cr', 0.1896, 'wo')
@@ -80,7 +80,7 @@ def openmc_materials(ppm):
 
     # Create zircaloy 4 material
     mats['Zircaloy 4'] = openmc.Material(name='Zircaloy 4')
-    mats['Zircaloy 4'].temperature = 300
+    mats['Zircaloy 4'].temperature = 565
     mats['Zircaloy 4'].set_density('g/cc', 6.55)
     mats['Zircaloy 4'].add_element('O', 0.00125, 'wo')
     mats['Zircaloy 4'].add_element('Cr', 0.0010, 'wo')
@@ -90,7 +90,7 @@ def openmc_materials(ppm):
 
     # Create carbon steel material
     mats['Carbon Steel'] = openmc.Material(name='Carbon Steel')
-    mats['Carbon Steel'].temperature = 300
+    mats['Carbon Steel'].temperature = 565
     mats['Carbon Steel'].set_density('g/cc', 7.8)
     mats['Carbon Steel'].add_element('C', 0.00270, 'wo')
     mats['Carbon Steel'].add_element('Mn', 0.00750, 'wo')
@@ -144,7 +144,7 @@ def openmc_materials(ppm):
         name = enr*100
         mat_name = 'Fuel {0:1.1f}%'.format(name)
         mats[mat_name] = openmc.Material(name=mat_name)
-        mats[mat_name].temperature = 300
+        mats[mat_name].temperature = 565
         mats[mat_name].set_density('g/cc', den)
         mats[mat_name].add_element('O', a_O, 'ao')
         mats[mat_name].add_element('U', a_U, 'ao', enrichment=enr*100)
@@ -171,7 +171,7 @@ def openmc_materials(ppm):
 
     # Create material
     mats['Borosilicate Glass'] = openmc.Material(name='Borosilicate Glass')
-    mats['Borosilicate Glass'].temperature = 300
+    mats['Borosilicate Glass'].temperature = 565
     mats['Borosilicate Glass'].set_density('g/cc', 2.26)
     mats['Borosilicate Glass'].add_element('O', aO_bsg, 'ao')
     mats['Borosilicate Glass'].add_element('Si', aSi_bsg, 'ao')
@@ -209,7 +209,7 @@ def openmc_materials(ppm):
 
     # Create material
     mats['Borated Water'] = openmc.Material(name='Borated Water')
-    mats['Borated Water'].temperature = 300
+    mats['Borated Water'].temperature = 565
     mats['Borated Water'].set_density('g/cc', rho_Bh2o)
     mats['Borated Water'].add_element('B', aB_Bh2o, 'ao')
     mats['Borated Water'].add_element('H', ah_Bh2o, 'ao')
@@ -235,6 +235,7 @@ def openmc_materials(ppm):
 
     # Create borated water
     mats['Water SPN'] = openmc.Material(name='Water SPN')
+    mats['Water SPN'].temperature = 565
     mats['Water SPN'].set_density('g/cc', rho_Bh2o_spn)
     mats['Water SPN'].add_element('B', aB_Bh2o, 'ao')
     mats['Water SPN'].add_element('H', ah_Bh2o, 'ao')
@@ -243,7 +244,7 @@ def openmc_materials(ppm):
 
     # Create stainless steel
     mats['SS304 SPN'] = openmc.Material(name='SS SPN')
-    mats['SS304 SPN'].temperature = 300
+    mats['SS304 SPN'].temperature = 565
     mats['SS304 SPN'].set_density('g/cc', rho_ss_spn)
     mats['SS304 SPN'].add_element('Si', 0.0060, 'wo')
     mats['SS304 SPN'].add_element('Cr', 0.1900, 'wo')
