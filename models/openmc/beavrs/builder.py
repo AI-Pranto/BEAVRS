@@ -40,9 +40,9 @@ class BEAVRS(object):
 
         self.openmc_geometry = openmc.Geometry(self.main_universe)
 
-        self.settings_batches = 10
-        self.settings_inactive = 5
-        self.settings_particles = 1000
+        self.settings_batches = 1000
+        self.settings_inactive = 300
+        self.settings_particles = 300000
         baffle_flat = 7.5*c.latticePitch
         if is_2d:
             self.settings_sourcebox = [-baffle_flat, -baffle_flat, c.struct_LowestExtent_2d,
